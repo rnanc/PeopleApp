@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/Header'
 import axios from 'axios';
+import PeopleList from './src/components/PeopleList'
 
 export default class App extends React.Component {
   constructor(props){
@@ -33,7 +34,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Header title="PeopleApp" />
-        {this.renderList()}
+        <PeopleList people={this.state.people} />
       </View>
     );
   } 
