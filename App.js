@@ -1,10 +1,14 @@
 import { createAppContainer} from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import PeoplePage from './src/pages/PeoplePage'
+import PeopleDetailPage from './src/pages/PeopleDetailPage'
 
 const appNavigator = createStackNavigator({
   'Main': {
     screen: PeoplePage
+  },
+  'PeopleDetail': {
+    screen: PeopleDetailPage
   }
 },{
   defaultNavigationOptions:{
@@ -13,6 +17,7 @@ const appNavigator = createStackNavigator({
       backgroundColor: '#848484',
       borderBottomWidth: 1,
       borderBottomColor: "#fff"
+
     },
     headerTitleStyle: {
       color: '#fff',
