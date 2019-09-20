@@ -6,7 +6,7 @@ const PeopleListItems = props => {
     const { people, onPress } = props;
     const { first, last } = people.name;
     return (
-        <TouchableOpacity onPress={ () => { onPress() }}>
+        <TouchableOpacity onPress={ () => { onPress({ people }) }}>
             <View style={style.line}>
                 <Image style={ style.avatar } source={{ uri:people.picture.thumbnail }} />
                 <Text style={style.lineText}>
